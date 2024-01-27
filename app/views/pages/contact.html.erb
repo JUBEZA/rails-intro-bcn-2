@@ -1,5 +1,5 @@
 <h1>contact</h1>
-<%# <% members = ["thanh", "dimitri", "germain", "damien", "julien"] %> %>
+<%# <% members = ["thanh", "dimitri", "germain", "damien", "julien"] %> 
 
 <ol>
   <% @members.each do |member| %>
@@ -8,3 +8,8 @@
 </ol>
 
 <%= link_to "Go Back Home", root_path %>
+
+<form action="/contact" method="get">
+  <input type="text" name="member"   value="<%= params[:member] %>" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
